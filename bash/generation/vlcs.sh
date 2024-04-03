@@ -16,7 +16,7 @@ class_name=("bird" "car" "chair" "dog" "person") # classes of VLCS
 source_domains="012"
 training_domains=("Caltech101" "LabelMe" "SUN09") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -44,7 +44,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="013"
 training_domains=("Caltech101" "LabelMe" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -72,7 +72,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="023"
 training_domains=("Caltech101" "SUN09" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -100,7 +100,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="123"
 training_domains=("LabelMe" "SUN09" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 

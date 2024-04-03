@@ -16,7 +16,7 @@ class_name=("Alarm_Clock" "Backpack" "Batteries" "Bed" "Bike" "Bottle" "Bucket" 
 source_domains="012"
 training_domains=("Art" "Clipart" "Product") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -44,7 +44,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="013"
 training_domains=("Art" "Clipart" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -72,7 +72,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="023"
 training_domains=("Art" "Product" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
@@ -100,7 +100,7 @@ python interpolation.py --training_domains "${training_domains[@]}" --augment_do
 source_domains="123"
 training_domains=("Clipart" "Product" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
-save_dir="/save/dm/${dataset}/${source_domains}/generation"
+save_dir="save/dm/${dataset}/${source_domains}/generation"
 ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
