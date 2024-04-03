@@ -23,17 +23,17 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 #interpolating "Caltech101" and "LabelMe"
 augment_domains=("Caltech101" "LabelMe")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "LabelMe" and "SUN09"
 augment_domains=("LabelMe" "SUN09")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Caltech101" and "SUN09"
 augment_domains=("Caltech101" "SUN09")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -51,17 +51,17 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 #interpolating "Caltech101" and "LabelMe"
 augment_domains=("Caltech101" "LabelMe")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "LabelMe" and "VOC2007"
 augment_domains=("LabelMe" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Caltech101" and "VOC2007"
 augment_domains=("Caltech101" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -79,17 +79,17 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 #interpolating "Caltech101" and "SUN09"
 augment_domains=("Caltech101" "SUN09")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "SUN09" and "VOC2007"
 augment_domains=("SUN09" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Caltech101" and "VOC2007"
 augment_domains=("Caltech101" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -107,17 +107,17 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 #interpolating "LabelMe" and "SUN09"
 augment_domains=("LabelMe" "SUN09")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "SUN09" and "VOC2007"
 augment_domains=("SUN09" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "LabelMe" and "VOC2007"
 augment_domains=("LabelMe" "VOC2007")
-python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes ${class_name}
+python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
