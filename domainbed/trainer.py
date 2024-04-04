@@ -74,12 +74,6 @@ def train(test_envs, args, hparams, n_steps, checkpoint_freq, logger, writer, ta
     n_envs = len(dataset)
     train_envs = sorted(set(range(n_envs)) - set(test_envs))
     iterator = misc.SplitIterator(test_envs)
-    # if args.aug_data_dir and not (args.same_bs): #[MENO] #TODO
-    #     print("+++ [MENO] since the Augmented version is used we divide the batch size by 2!")
-    #     logger.info("+++ [MENO] since the Augmented version is used we divide the batch size by 2!")
-    #     batch_sizes = np.full([n_envs], hparams["batch_size"], dtype=np.int)
-    #     batch_sizes = np.ceil(batch_sizes/2).astype(int)
-    # else:
     batch_sizes = np.full([n_envs], hparams["batch_size"], dtype=int) 
         
 
