@@ -59,7 +59,7 @@ def main():
     )
 
     parser.add_argument(
-        "--augment_domains",
+        "--int_domains",
         type=str,
         nargs="+",
         help="Two domains that should be interpolated"
@@ -195,10 +195,10 @@ def main():
     assert len(scale_bounds)==2 and scale_bounds[0] <= scale_bounds[1]
 
     training_domains = opt.training_domains 
-    augment_domains = opt.augment_domains
+    int_domains = opt.int_domains
 
-    print(f"training_domains: {training_domains}")
-    print(f"augment_domains: {augment_domains}")
+    print(f"training domains: {training_domains}")
+    print(f"interpolating domains: {int_domains}")
 
     config = OmegaConf.load(f"{opt.config}")
     model = load_model_from_config(config, f"{opt.ckpt}")
@@ -214,14 +214,14 @@ def main():
         start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
   
 
-    new_domain_name = augment_domains[0] + '_' + augment_domains[1]
+    new_domain_name = int_domains[0] + '_' + int_domains[1]
     print(f"+++ New Domain Name: {new_domain_name}")
 
     for c_idx, class_name in enumerate(all_classes):
         print(f"++++ creating the class {c_idx+1}/{len(all_classes)}: {class_name}")
 
-        prompt1 = augment_domains[0] + f", {class_name}"
-        prompt2 = augment_domains[1] + f", {class_name}"
+        prompt1 = int_domains[0] + f", {class_name}"
+        prompt2 = int_domains[1] + f", {class_name}"
 
   
         print(f"prompt1: {prompt1}")

@@ -23,18 +23,18 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
 #interpolating "Art" and "Clipart"
-augment_domains=("Art" "Clipart")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Clipart")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Clipart" and "Product"
-augment_domains=("Clipart" "Product")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Clipart" "Product")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Art" and "Product"
-augment_domains=("Art" "Product")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Product")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -51,18 +51,18 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
 #interpolating "Art" and "Clipart"
-augment_domains=("Art" "Clipart")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Clipart")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Clipart" and "Real World"
-augment_domains=("Clipart" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Clipart" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Art" and "Real World"
-augment_domains=("Art" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -79,18 +79,18 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
 #interpolating "Art" and "Product"
-augment_domains=("Art" "Product")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Product")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Product" and "Real World"
-augment_domains=("Product" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Product" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Art" and "Real World"
-augment_domains=("Art" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Art" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
@@ -107,18 +107,18 @@ ckpt_dir="path/to/a/checkpoint" # path to the trained model
 
 
 #interpolating "Clipart" and "Product"
-augment_domains=("Clipart" "Product")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Clipart" "Product")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Product" and "Real World"
-augment_domains=("Product" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Product" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 #interpolating "Clipart" and "Real World"
-augment_domains=("Clipart" "Real World")
-CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --augment_domains "${augment_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
+int_domains=("Clipart" "Real World")
+CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${training_domains[@]}" --int_domains "${int_domains[@]}" --int_bounds ${int_lower} ${int_upper} --scale_bounds ${cfg_lower} ${cfg_upper} --outdir ${save_dir} --H 256 --W 256 --n_samples ${batch_size} --iter_per_class ${iter_per_class} --config ${config_dir} --ckpt ${ckpt_dir} --ddim_steps ${ddim_steps}  --classes "${class_name[@]}"
 
 
 
