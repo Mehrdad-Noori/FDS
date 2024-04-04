@@ -3,7 +3,7 @@
 
 ### parameters
 dataset=OfficeHome
-save_dir="./save/dm/${dataset}/"
+save_dir="./save/train_cls/${dataset}/"
 data_dir="./data"
 
 

@@ -16,17 +16,17 @@ gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
 
 ### first seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed0/image_predictions.csv"
-python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### second seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed1/image_predictions.csv"
-python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### third seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed2/image_predictions.csv"
-python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 
@@ -37,17 +37,17 @@ gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
 
 ### first seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed0/image_predictions.csv"
-python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### second seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed1/image_predictions.csv"
-python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### third seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed2/image_predictions.csv"
-python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 
@@ -58,17 +58,17 @@ gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
 
 ### first seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed0/image_predictions.csv"
-python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### second seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed1/image_predictions.csv"
-python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### third seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed2/image_predictions.csv"
-python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 
@@ -79,15 +79,15 @@ gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
 
 ### first seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed0/image_predictions.csv"
-python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}0_${source_domains} --dataset ${dataset} --deterministic --trial_seed 0 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### second seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed1/image_predictions.csv"
-python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}1_${source_domains} --dataset ${dataset} --deterministic --trial_seed 1 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
 
 ### third seed
 gen_csv_dir="save/eval/${dataset}/${source_domains}/seed2/image_predictions.csv"
-python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 100 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
+python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --deterministic --trial_seed 2 --checkpoint_freq 50 --tolerance_ratio 0.2 --test_envs ${test_env} --data_dir ${data_dir} --work_dir $save_dir --use_gen --gen_data_dir ${gen_data_dir} --gen_csv_dir ${gen_csv_dir} --gen_num_per_class ${gen_num_per_class} --gen_only_correct
 
