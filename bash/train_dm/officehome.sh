@@ -5,7 +5,7 @@ nvidia-smi
 
 
 ### parameters
-dataset=OH 
+dataset=OfficeHome
 scale_lr=False
 no_test=True
 num_nodes=1

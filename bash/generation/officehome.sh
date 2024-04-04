@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### parameters
-dataset=OH
+dataset=OfficeHome
 gpu=0
 batch_size=20
 ddim_steps=50
