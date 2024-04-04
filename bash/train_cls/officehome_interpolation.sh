@@ -9,7 +9,7 @@ gen_num_per_class=70 # number of images/class of the interpolated (generated) da
 
 
 
-########################## training the classifier using both original and interpolated data using the source domains:  (Art, Clipart, Product) domains
+########################## training the classifier using both original and interpolated data using the source domains:  (Art, Clipart, Product) domains => indexes: "0" "1" "2"
 source_domains="012"
 test_env=3
 gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -30,7 +30,7 @@ python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --determi
 
 
 
-########################## training the classifier using both original and interpolated data using the source domains: (Art, Clipart, Real World) domains
+########################## training the classifier using both original and interpolated data using the source domains: (Art, Clipart, Real World) domains => indexes: "0" "1" "3"
 source_domains="013"
 test_env=2
 gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -51,7 +51,7 @@ python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --determi
 
 
 
-########################## training the classifier using both original and interpolated data using the source domains: (Art, Product, Real World) domains
+########################## training the classifier using both original and interpolated data using the source domains: (Art, Product, Real World) domains => indexes: "0" "2" "3"
 source_domains="023"
 test_env=1
 gen_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -72,7 +72,7 @@ python train_cls.py ${dataset}2_${source_domains} --dataset ${dataset} --determi
 
 
 
-########################## training the classifier using both original and interpolated data using the source domains: (Clipart, Product, Real World) domains
+########################## training the classifier using both original and interpolated data using the source domains: (Clipart, Product, Real World) domains => indexes: "1" "2" "3"
 source_domains="123"
 test_env=0
 gen_data_dir="save/dm/${dataset}/${source_domains}/generation"

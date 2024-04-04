@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-### 012 domain indexes to get the generated data related to source domains (art, cartoon, photo)
+### 012 domain indexes to get the generated data related to source domains (art, cartoon, photo) => indexes: "0" "1" "2"
 dataset="PACS"
 source_domains="012"
 generated_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -26,7 +26,7 @@ python eval_cls.py --data_dir $generated_data_dir --save_dir $save_dir --ckpt_di
 
 
 
-### 013 domain indexes to get the generated data related to source domains (art, cartoon, sketch)
+### 013 domain indexes to get the generated data related to source domains (art, cartoon, sketch) => indexes: "0" "1" "3"
 dataset="PACS"
 source_domains="013"
 generated_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -52,7 +52,7 @@ python eval_cls.py --data_dir $generated_data_dir --save_dir $save_dir --ckpt_di
 
 
 
-### 023 domain indexes to get the generated data related to source domains (art, photo, sketch)
+### 023 domain indexes to get the generated data related to source domains (art, photo, sketch) => indexes: "0" "2" "3"
 dataset="PACS"
 source_domains="023"
 generated_data_dir="save/dm/${dataset}/${source_domains}/generation"
@@ -78,7 +78,7 @@ python eval_cls.py --data_dir $generated_data_dir --save_dir $save_dir --ckpt_di
 
 
 
-### 123 domain indexes to get the generated data related to source domains (cartoon, photo, sketch)
+### 123 domain indexes to get the generated data related to source domains (cartoon, photo, sketch) => indexes: "1" "2" "3"
 dataset="PACS"
 source_domains="123"
 generated_data_dir="save/dm/${dataset}/${source_domains}/generation"

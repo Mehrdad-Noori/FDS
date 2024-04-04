@@ -13,7 +13,7 @@ cfg_upper=6.0
 class_name=("bird" "car" "chair" "dog" "person") # classes of VLCS
 
 
-########################## interploation using the DM trained on "Caltech101 LabelMe SUN09" domains
+########################## interploation using the DM trained on "Caltech101 LabelMe SUN09" domains => indexes: "0" "1" "2"
 source_domains="012"
 training_domains=("Caltech101" "LabelMe" "SUN09") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "Caltech101 LabelMe VOC2007" domains
+########################## interploation using the DM trained on "Caltech101 LabelMe VOC2007" domains => indexes: "0" "1" "3"
 source_domains="013"
 training_domains=("Caltech101" "LabelMe" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "Caltech101 SUN09 VOC2007" domains
+########################## interploation using the DM trained on "Caltech101 SUN09 VOC2007" domains => indexes: "0" "2" "3"
 source_domains="023"
 training_domains=("Caltech101" "SUN09" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "LabelMe SUN09 VOC2007" domains
+########################## interploation using the DM trained on "LabelMe SUN09 VOC2007" domains => indexes: "1" "2" "3"
 source_domains="123"
 training_domains=("LabelMe" "SUN09" "VOC2007") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"

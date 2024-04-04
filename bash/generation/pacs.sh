@@ -13,7 +13,7 @@ cfg_upper=6.0
 class_name=("dog" "guitar" "horse" "elephant" "house" "person" "giraffe") # classes of PACS
 
 
-########################## interploation using the DM trained on "art_painting cartoon photo" domains
+########################## interploation using the DM trained on "art_painting cartoon photo" domains => indexes: "0" "1" "2"
 source_domains="012"
 training_domains=("art_painting" "cartoon" "photo") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "art_painting cartoon sketch" domains
+########################## interploation using the DM trained on "art_painting cartoon sketch" domains => indexes: "0" "1" "3"
 source_domains="013"
 training_domains=("art_painting" "cartoon" "sketch") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "art_painting photo sketch" domains
+########################## interploation using the DM trained on "art_painting photo sketch" domains => indexes: "0" "2" "3"
 source_domains="023"
 training_domains=("art_painting" "photo" "sketch") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "cartoon photo sketch" domains
+########################## interploation using the DM trained on "cartoon photo sketch" domains => indexes: "1" "2" "3"
 source_domains="123"
 training_domains=("cartoon" "photo" "sketch") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"

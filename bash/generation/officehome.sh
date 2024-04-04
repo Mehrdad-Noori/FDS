@@ -13,7 +13,7 @@ cfg_upper=6.0
 class_name=("Alarm_Clock" "Backpack" "Batteries" "Bed" "Bike" "Bottle" "Bucket" "Calculator" "Calendar" "Candles" "Chair" "Clipboards" "Computer" "Couch" "Curtains" "Desk_Lamp" "Drill" "Eraser" "Exit_Sign" "Fan" "File_Cabinet" "Flipflops" "Flowers" "Folder" "Fork" "Glasses" "Hammer" "Helmet" "Kettle" "Keyboard" "Knives" "Lamp_Shade" "Laptop" "Marker" "Monitor" "Mop" "Mouse" "Mug" "Notebook" "Oven" "Pan" "Paper_Clip" "Pen" "Pencil" "Postit_Notes" "Printer" "Push_Pin" "Radio" "Refrigerator" "Ruler" "Scissors" "Screwdriver" "Shelf" "Sink" "Sneakers" "Soda" "Speaker" "Spoon" "TV" "Table" "Telephone" "ToothBrush" "Toys" "Trash_Can" "Webcam")
 
 
-########################## interploation using the DM trained on "Art Clipart Product" domains
+########################## interploation using the DM trained on "Art Clipart Product" domains => indexes: "0" "1" "2"
 source_domains="012"
 training_domains=("Art" "Clipart" "Product") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "Art Clipart Real World" domains
+########################## interploation using the DM trained on "Art Clipart Real World" domains  => indexes: "0" "1" "3"
 source_domains="013"
 training_domains=("Art" "Clipart" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "Art Product Real World" domains
+########################## interploation using the DM trained on "Art Product Real World" domains => indexes: "0" "2" "3"
 source_domains="023"
 training_domains=("Art" "Product" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=${gpu}  python interpolation.py --training_domains "${train
 
 
 
-########################## interploation using the DM trained on "Clipart Product Real World" domains
+########################## interploation using the DM trained on "Clipart Product Real World" domains => indexes: "1" "2" "3"
 source_domains="123"
 training_domains=("Clipart" "Product" "Real World") # corresponding names for the source_domains
 config_dir="configs/${dataset}/d${source_domains}.yaml"
