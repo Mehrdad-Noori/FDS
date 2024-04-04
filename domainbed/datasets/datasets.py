@@ -337,7 +337,7 @@ class DomainCSV(Dataset):
                     selected_images = class_images.sample(n=num_per_class)
                 else:
                     # If random_selection is False, proceed with the existing logic
-                    print(f"+++ will select {num_per_class} images based on entropy")
+                    print(f"+++ will select {num_per_class} images")
                     class_images = class_images[class_images.iloc[:, -2] < max_entropy]  # Filter by max_entropy
                     class_images = class_images.sort_values(by=class_images.columns[-2], ascending=False)  # Sort by entropy
                     selected_images = class_images.head(num_per_class)  # Select top num_per_class images
@@ -372,23 +372,23 @@ class PACSGenCSV(MultipleEnvironmentWithGeneratedImageFolderCSV):
     CHECKPOINT_FREQ = 200
     ENVIRONMENTS = ["A", "C", "P", "S", "Z1", "Z2", "Z3"]
 
-    def __init__(self, org_root, gen_root, csv_root, gen_num_per_class, gen_max_entropy, test_env, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
+    def __init__(self, org_root, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
         self.dir = os.path.join(org_root, "PACS/")
-        super().__init__(self.dir, gen_root, csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
+        super().__init__(self.dir, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
 
 class VLCSGenCSV(MultipleEnvironmentWithGeneratedImageFolderCSV):
     CHECKPOINT_FREQ = 200
     ENVIRONMENTS = ["C", "L", "S", "V", "Z1", "Z2", "Z3"]
 
-    def __init__(self, root, gen_root, csv_root, gen_num_per_class, gen_max_entropy, test_env, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
+    def __init__(self, root, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
         self.dir = os.path.join(root, "VLCS/")
-        super().__init__(self.dir, gen_root, csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
+        super().__init__(self.dir, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
 
 class OfficeHomeGenCSV(MultipleEnvironmentWithGeneratedImageFolderCSV):
     CHECKPOINT_FREQ = 200
     ENVIRONMENTS = ["A", "C", "P", "R", "Z1", "Z2", "Z3"]
 
-    def __init__(self, root, gen_root, csv_root, gen_num_per_class, gen_max_entropy, test_env, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
+    def __init__(self, root, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection=False, gen_all_data=False, gen_only_correct=False, gen_envs=None):
         self.dir = os.path.join(root, "office_home/")
-        super().__init__(self.dir, gen_root, csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
+        super().__init__(self.dir, gen_root, grn_csv_root, gen_num_per_class, gen_max_entropy, gen_random_selection, gen_all_data, gen_only_correct=gen_only_correct, gen_envs=gen_envs)
 

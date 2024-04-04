@@ -37,7 +37,7 @@ def train(test_envs, args, hparams, n_steps, checkpoint_freq, logger, writer, ta
     #######################################################
     args.real_test_envs = test_envs  # for log
     algorithm_class = algorithms.get_algorithm_class(args.algorithm)
-    dataset, in_splits, out_splits = get_dataset(test_envs, args, hparams, algorithm_class) #TODO
+    dataset, in_splits, out_splits = get_dataset(test_envs, args, hparams, algorithm_class) 
     test_splits = []
     if hparams.indomain_test > 0.0:
         logger.info("!!! In-domain test mode On !!!")

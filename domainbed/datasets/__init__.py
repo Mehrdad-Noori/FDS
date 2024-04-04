@@ -39,8 +39,8 @@ def get_dataset(test_envs, args, hparams, algorithm_class=None):
     """Get dataset and split."""
     if args.dataset=="PACSGenCSV" or args.dataset=="VLCSGenCSV" or args.dataset=="OfficeHomeGenCSV":
         dataset = vars(datasets)[args.dataset](args.data_dir, args.gen_data_dir, 
-                                                    args.gen_csv_dir, args.num_per_class, args.max_entropy,
-                                                    args.test_envs, args.random_csv_selection, args.all_csv_data, args.only_correct, args.aug_envs)
+                                                    args.gen_csv_dir, args.gen_num_per_class, args.gen_max_entropy,
+                                                    args.gen_random_selection, args.gen_all_data, args.gen_only_correct)
         
 
     else:

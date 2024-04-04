@@ -45,11 +45,11 @@ def main():
     parser.add_argument('--use_gen', action='store_true', help="if true, the generated data will also be used by the specified setting")
     parser.add_argument('--gen_data_dir', type=str, help="Path to the generated data.")
     parser.add_argument('--gen_csv_dir', type=str, help="Path to the evalated information stored in a .csv file.")
-    parser.add_argument('--num_per_class', type=int, help="Numbner genertaed images per class which will selected for training!")
-    parser.add_argument('--max_entropy', type=float, default=float('inf'), help="if specified, the samples with higher entropy than 'max_entropy' will not be used.")
-    parser.add_argument('--only_correct', action='store_true', help="if true, we will choose only the images that are correctly classified!")
-    parser.add_argument('--random_selection', action='store_true', help="if true, we will choose 'num_per_class' images randomly. entropy will be ignored!")
-    parser.add_argument('--all_gen_data', action='store_true', help="if true, we will choose all the data for training")
+    parser.add_argument('--gen_num_per_class', type=int, help="Numbner genertaed images per class which will selected for training!")
+    parser.add_argument('--gen_max_entropy', type=float, default=float('inf'), help="if specified, the samples with higher entropy than 'gen_max_entropy' will not be used.")
+    parser.add_argument('--gen_only_correct', action='store_true', help="if true, we will choose only the images that are correctly classified!")
+    parser.add_argument('--gen_random_selection', action='store_true', help="if true, we will choose 'gen_num_per_class' images randomly. entropy will be ignored!")
+    parser.add_argument('--gen_all_data', action='store_true', help="if true, we will choose all the data for training")
 
     args, left_argv = parser.parse_known_args()
 
@@ -110,11 +110,11 @@ def main():
     if args.show:
         exit()
 
-    if args.random_csv_selection:
-        print(f"+++ random_csv_selection is True. Entropy will be ignored, and {args.num_per_class} fixed random images will be selected")
-    if args.all_csv_data:
-        print(f"+++ all_csv_data is True. Entropy will be ignored")
-    if args.only_correct:
+    if args.gen_random_selection:
+        print(f"+++ gen_random_selection is True. Entropy will be ignored, and {args.gen_num_per_class} fixed random images will be selected")
+    if args.gen_all_data:
+        print(f"+++ gen_all_data is True. All generated data will be used!")
+    if args.gen_only_correct:
         print(f"+++ only correct is True. Only the correctly classied images are used!")
 
     # seed
