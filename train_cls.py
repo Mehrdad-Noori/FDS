@@ -20,29 +20,17 @@ from domainbed.trainer import train
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Domain generalization")
+    parser = argparse.ArgumentParser(description="Training the classifier. Can be alos used to include the generated data with filtering.")
     parser.add_argument("name", type=str)
     parser.add_argument("configs", nargs="*")
     parser.add_argument("--data_dir", type=str, default="datadir/")
     parser.add_argument('--work_dir', type=str, default='./')
     parser.add_argument("--dataset", type=str, default="PACS")
     parser.add_argument("--algorithm", type=str, default="ERM")
-    parser.add_argument(
-        "--trial_seed",
-        type=int,
-        default=0,
-        help="Trial number (used for seeding split_dataset and random_hparams).",
-    )
+    parser.add_argument("--trial_seed", type=int, default=0, help="Trial number (used for seeding split_dataset and random_hparams).")
     parser.add_argument("--seed", type=int, default=0, help="Seed for everything else")
-    parser.add_argument(
-        "--steps", type=int, default=None, help="Number of steps. Default is dataset-dependent."
-    )
-    parser.add_argument(
-        "--checkpoint_freq",
-        type=int,
-        default=None,
-        help="Checkpoint every N steps. Default is dataset-dependent.",
-    )
+    parser.add_argument("--steps", type=int, default=None, help="Number of steps. Default is dataset-dependent.")
+    parser.add_argument("--checkpoint_freq", type=int, default=None, help="Checkpoint every N steps. Default is dataset-dependent.")
     parser.add_argument("--test_envs", type=int, nargs="+", default=None)  
     parser.add_argument("--holdout_fraction", type=float, default=0.2)
     parser.add_argument("--model_save", default=None, type=int, help="Model save start step")
@@ -50,12 +38,19 @@ def main():
     parser.add_argument("--tb_freq", default=10)
     parser.add_argument("--debug", action="store_true", help="Run w/ debug mode")
     parser.add_argument("--show", action="store_true", help="Show args and hparams w/o run")
-    parser.add_argument(
-        "--evalmode",
-        default="fast",
-        help="[fast, all]. if fast, ignore train_in datasets in evaluation time.",
-    )
+    parser.add_argument("--evalmode", default="fast",help="[fast, all]. if fast, ignore train_in datasets in evaluation time.",)
     parser.add_argument("--prebuild_loader", action="store_true", help="Pre-build eval loaders")
+
+    # args to use/filter generated data => will be enabled if use --use_gen
+    parser.add_argument('--use_gen', action='store_true', help="if true, the generated data will also be used by the specified setting")
+    parser.add_argument('--gen_data_dir', type=str, help="Path to the generated data.")
+    parser.add_argument('--gen_csv_dir', type=str, help="Path to the evalated information stored in a .csv file.")
+    parser.add_argument('--num_per_class', type=int, help="Numbner genertaed images per class which will selected for training!")
+    parser.add_argument('--max_entropy', type=float, default=float('inf'), help="if specified, the samples with higher entropy than 'max_entropy' will not be used.")
+    parser.add_argument('--only_correct', action='store_true', help="if true, we will choose only the images that are correctly classified!")
+    parser.add_argument('--random_selection', action='store_true', help="if true, we will choose 'num_per_class' images randomly. entropy will be ignored!")
+    parser.add_argument('--all_gen_data', action='store_true', help="if true, we will choose all the data for training")
+
     args, left_argv = parser.parse_known_args()
 
     # setup hparams
@@ -66,6 +61,9 @@ def main():
     hparams = Config(*keys, default=hparams)
     hparams.argv_update(left_argv)
 
+    if args.use_gen:
+        print("+++ Generated data will also be used during training!")
+        args.dataset = args.dataset + "GenCSV"
     # setup debug
     if args.debug:
         args.checkpoint_freq = 5
@@ -111,6 +109,13 @@ def main():
 
     if args.show:
         exit()
+
+    if args.random_csv_selection:
+        print(f"+++ random_csv_selection is True. Entropy will be ignored, and {args.num_per_class} fixed random images will be selected")
+    if args.all_csv_data:
+        print(f"+++ all_csv_data is True. Entropy will be ignored")
+    if args.only_correct:
+        print(f"+++ only correct is True. Only the correctly classied images are used!")
 
     # seed
     random.seed(args.seed)

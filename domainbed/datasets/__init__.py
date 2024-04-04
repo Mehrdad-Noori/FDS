@@ -9,7 +9,7 @@ from domainbed.datasets import transforms as DBT
 def set_transfroms(dset, data_type, hparams, algorithm_class=None):
     """
     Args:
-        data_type: ['train', 'valid', 'test', 'mnist']
+        data_type: ['train', 'valid', 'test']
     """
     assert hparams["data_augmentation"]
 
@@ -27,9 +27,6 @@ def set_transfroms(dset, data_type, hparams, algorithm_class=None):
             dset.transforms = {"x": DBT.aug}
     elif data_type == "test":
         dset.transforms = {"x": DBT.basic}
-    elif data_type == "mnist":
-        # No augmentation for mnist
-        dset.transforms = {"x": lambda x: x}
     else:
         raise ValueError(data_type)
 
@@ -40,24 +37,14 @@ def set_transfroms(dset, data_type, hparams, algorithm_class=None):
 
 def get_dataset(test_envs, args, hparams, algorithm_class=None):
     """Get dataset and split."""
-    is_mnist = "MNIST" in args.dataset
-    # if args.aug_data_dir: #This is for train_all_augment.py
-    #     if isinstance(test_envs, list):
-    #         assert len(test_envs)==1
-    #         single_test_envs = test_envs[0]
-    #     else:
-    #         single_test_envs = test_envs
-    #     dataset = vars(datasets)[args.dataset](args.data_dir, args.aug_data_dir, single_test_envs)
-    if args.dataset=="PACSAugCSV" or args.dataset=="PACSAugCSVSame" or args.dataset=="VLCSAugCSV" or args.dataset=="OfficeHomeAugCSV" or args.dataset=="TerraIncognitaAugCSV":
-        dataset = vars(datasets)[args.dataset](args.data_dir, args.aug_data_dir, 
-                                                    args.aug_csv_dir, args.num_per_class, args.max_entropy,
+    if args.dataset=="PACSGenCSV" or args.dataset=="VLCSGenCSV" or args.dataset=="OfficeHomeGenCSV":
+        dataset = vars(datasets)[args.dataset](args.data_dir, args.gen_data_dir, 
+                                                    args.gen_csv_dir, args.num_per_class, args.max_entropy,
                                                     args.test_envs, args.random_csv_selection, args.all_csv_data, args.only_correct, args.aug_envs)
         
 
     else:
         dataset = vars(datasets)[args.dataset](args.data_dir)
-    #  if not isinstance(dataset, MultipleEnvironmentImageFolder):
-    #      raise ValueError("SMALL image datasets are not implemented (corrupted), for transform.")
 
     in_splits = []
     out_splits = []
@@ -77,10 +64,6 @@ def get_dataset(test_envs, args, hparams, algorithm_class=None):
             in_type = "train"
             out_type = "valid"
 
-        if is_mnist:
-            in_type = "mnist"
-            out_type = "mnist"
-
         set_transfroms(in_, in_type, hparams, algorithm_class)
         set_transfroms(out, out_type, hparams, algorithm_class)
 
@@ -92,7 +75,7 @@ def get_dataset(test_envs, args, hparams, algorithm_class=None):
         in_splits.append((in_, in_weights))
         out_splits.append((out, out_weights))
 
-    print(f"[MENO] Num datasets: {len(dataset)}")
+    print(f"Num datasets: {len(dataset)}")
 
     return dataset, in_splits, out_splits
 
