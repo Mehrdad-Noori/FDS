@@ -296,9 +296,7 @@ class DomainCSV(Dataset):
             tmp_list = list(self.data_frame['Path'])
             print(f"\n\n+++++Changing the data dir from: \n{tmp_list[0]}")
 
-            if 'projets' in tmp_list[0]:
-                self.data_frame['Path'] = self.data_frame['Path'].str.replace(r'/projets/Mnoori/original_dm/generation/final/[^/]+', new_data_dir, regex=True)
-            elif "localscratch" in tmp_list[0]:
+            if "localscratch" in tmp_list[0]:
                 self.data_frame['Path'] = self.data_frame['Path'].apply(lambda x: cc_extract_and_join(x, new_data_dir))
                 print("++++ cc detcted!a")
 
