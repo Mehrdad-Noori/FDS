@@ -102,6 +102,13 @@ The following figure shows the interpolation between “art” and “sketch” 
     <img src="figures/visualization.jpg" width="100%" />
 </div>
 
+The following figure show the inter-domain transition from “sketch” to “art”. Displayed here is the transformation that occurs as \alpha is adjusted, beginning with 0.0 (pure sketches) and moving towards 1.0 (fully art-inspired images). The model effectively infuses basic sketches with complex textures and colors, transitioning from minimalistic line art to detailed
+and vibrant artistic images.
+
+<div style="text-align: center;">
+    <img src="figures/sketch_to_art.jpg" width="100%" />
+</div>
+
 
 ## License
 
