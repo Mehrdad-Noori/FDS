@@ -76,8 +76,6 @@ ckpt_dir=path/to/a/trained/model.pth (from the previous step)
 python eval_cls.py --data_dir save/dm/PACS/023/generation --save_dir save/eval/PACS/023/seed0 --ckpt_dir ${ckpt_dir}
 
 # training the final classifier using both original and newly generated data
-
-
 python train_cls.py PACS_seed0_d023 --dataset PACS --deterministic --trial_seed 0 --checkpoint_freq 100 --test_envs 1 --data_dir ./data --work_dir  --use_gen --gen_data_dir save/dm/PACS/023/generation --gen_csv_dir save/eval/PACS/023/seed0/image_predictions.csv --gen_num_per_class 570 --gen_only_correct
 
 
