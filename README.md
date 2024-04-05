@@ -6,7 +6,7 @@ The official implementation of our paper "Feedback-guided Domain Synthesis with 
 ## Mehtod
 
 <div style="text-align: center;">
-    <img src="figures/main.png" width="90%" />
+    <img src="figures/main.png" width="100%" />
 </div>
 
 <!-- Add space -->
@@ -51,7 +51,7 @@ There are different bash files in `bash` directory which are prepared to reprodu
 
 As an example, here we show the codes for synthesizing new domains for `"art" "photo", "sketch"` domains of the PACS dataset (the corresponding domain indexes are "0" (art), "2" (photo), and "3" (sketch) and the target source will be "1" 'cartoon'):
 
-Note, we use Stable Diffusion V1.5 as our inititialization weights, which can be downloaded from [this link](https://huggingface.co/runwayml/stable-diffusion-v1-5).
+Note that we use Stable Diffusion V1.5 as our inititialization weights, which can be downloaded from [this link](https://huggingface.co/runwayml/stable-diffusion-v1-5).
 
 
 
