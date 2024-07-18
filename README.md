@@ -87,12 +87,12 @@ The commands to run other datasets/domains can be found in `bash` directory (onl
 
 Here are the results of our prposed FDS method using two baslines `ERM` and `SWAD`. Refer to the paper for a more detailed exploration and comprehensive table of the results.
 
-| **Method**          | **PACS**       | **VLCS**       | **OfficeHome** | **Avg.**       |
-|---------------------|----------------|----------------|----------------|----------------|
-| ERM (reproduced)    | 84.3 ±1.1      | 76.2 ±1.1      | 64.6 ±1.1      | 75.0           |
-| ERM + FDS (ours)    | **88.8 ±0.1**  | **79.8 ±0.5**  | **71.1 ±0.1**  | **79.9**       |
-| SWAD (reproduced)   | 88.1 ±0.4      | 78.9 ±0.5      | 70.3 ±0.4      | 79.1 ±0.4      |
-| SWAD + FDS (ours)   | **90.5 ±0.3**  | **79.7 ±0.5**  | **73.5 ±0.4**  | **81.3 ±0.4**  |
+| **Method**          | **PACS**       | **VLCS**       | **OfficeHome** | **Avg.**  |
+|---------------------|----------------|----------------|----------------|-----------|
+| ERM (reproduced)    | 84.3 ±1.1      | 76.2 ±1.1      | 64.6 ±1.1      | 75.0      |
+| ERM + FDS (ours)    | **88.8 ±0.1**  | **79.8 ±0.5**  | **71.1 ±0.1**  | **79.9**  |
+| SWAD (reproduced)   | 88.1 ±0.4      | 78.9 ±0.5      | 70.3 ±0.4      | 79.1      |
+| SWAD + FDS (ours)   | **90.5 ±0.3**  | **79.7 ±0.5**  | **73.5 ±0.4**  | **81.3**  |
 
 ### Visualizations
 
